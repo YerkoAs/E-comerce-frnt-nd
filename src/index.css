@@ -1,0 +1,44 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body.dark {
+    background-color: #000;
+    color: #f01010;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: inline-block;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+input, button {
+    display: inline-block;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: center;
+}
+
+button {
+    border: none;
+    padding: 3px 9px;
+    border-radius: 3px;
+    transition: transform 0.25s;
+}
+button:hover {
+    transform: scale(1.1);
+    transition: transform 0.25s;
+}

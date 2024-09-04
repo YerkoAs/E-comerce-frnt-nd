@@ -1,0 +1,30 @@
+.productinfo {
+    max-width: 100%;
+    padding: 70px 35px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    /* border: 1px solid #ff0000; */
+}
+.productinfo__products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.productinfo__similar {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+@media (width < 740px) {
+    .productinfo {
+        flex: 1 1 100%;
+    }
+    .productinfo__products {
+        flex-direction: column;
+    }
+}
+

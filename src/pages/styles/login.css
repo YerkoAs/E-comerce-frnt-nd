@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+.login {
+    padding-top: 90px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../public/assets/background-1.jpg');
+    background-size: cover;
+    background-position: center ;
+}
+.login__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    height: 350px;
+    border: 1px solid #848484be;
+    border-radius: 20px;
+    padding: 10px;
+}
+.login__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 140px;
+}
+.login__title {
+    font-family: "Patua One", serif;
+    font-weight: 200;
+    color: #0cdd1d;
+    font-style: normal;
+    width: 125px;
+    text-align: justify;
+    display: inline-block;
+    white-space: nowrap;
+}
+.login__title span {
+    display: inline-block;
+    width: 100%;
+    letter-spacing: 13px;
+}
+
+.login__label {
+    width: max-content;
+    margin: 10px auto;
+    display: grid;
+    grid-template-areas: "input";
+}
+.login__input {
+    grid-area: input;
+    width: 200px;
+    font: inherit;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 0.25rem 1.5rem;
+}
+.label__name {
+    grid-area: input;
+    z-index: 100;
+    width: max-content;
+    margin-left: 1rem;
+    padding: 0 0.5rem;
+    align-self: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.75rem;
+
+    transition: transform 0.2s;
+    transform-origin: center left;
+}
+
+.login__input:where(:focus, :not(:placeholder-shown)) + .label__name {
+    transform: translateY(-50%) scale(0.7);
+    background-color: #ffffff;
+}
+
+.login__btn {
+    width: 200px;
+    padding: 0.3rem 0;
+    background-color: #75ff35;
+    border: 1px solid #19c227eb;
+    color: #504f4f;
+    font-size: 1rem;
+    border-radius: 7.5px;
+}
+.active{
+    display: block;
+    color: red;
+    font-size: 15px;
+}
+.non-active{
+    display: none;
+}
+.login__text {
+    font-size: 0.85rem;
+    text-align: center;
+    color: #e4cfcf;
+}
+.login__test {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    background-color: #497c31;
+    border: 1px solid #19c227eb;
+    color: #e4cfcf;
+    font-size: 0.9rem;
+    border-radius: 10px;
+}

@@ -1,0 +1,64 @@
+.prodslider {
+    box-sizing: border-box;
+    flex: 1 1 50%;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.prodslider__box {
+    max-width: 320px;
+}
+.crsl {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.prodslider__img {
+    max-width: auto;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* ConfigureCarousel */
+.carousel .thumbs-wrapper {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel .thumbs-wrapper .thumb {
+    justify-content: center;
+    align-items: center;
+    max-width: 60px; 
+    height: auto; 
+    
+}
+.carousel .thumbs-wrapper .thumb img {
+    max-height: 60px; 
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.carousel .control-prev.control-arrow,
+.carousel .control-next.control-arrow  {
+    background-color: rgb(0, 34, 255);
+}
+
+
+
+
+
+
+@media (width < 740px) {
+    .prodslider {
+        flex: 1 1 100%;
+    }
+}

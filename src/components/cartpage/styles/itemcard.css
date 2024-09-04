@@ -1,0 +1,31 @@
+.itemcard {
+    width: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr 1fr;
+    place-items: center;
+    border: 1px solid #c1c1c1;
+    gap: 10px;
+}
+.itemcard__title {
+    grid-column: span 3;
+}
+.itemcard__buttons {
+    display: flex;
+}
+.itemcard__buttons > span {
+    padding: 0 10px;
+}
+.itemcard__btn {
+    background-color: #3586ff;
+    color: #fff;
+}
+.itemcard__btn-delete {
+    background-color: #3586ff;
+    color: #fff;
+}
+.itemcard__total {
+    grid-column: span 3;
+}

@@ -1,0 +1,40 @@
+.purchasecard__item {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    height: 70px;
+    margin-bottom: 20px;
+    border: 1px solid #b5b5b5b1;
+    border-radius: 15px;
+    padding: 5px 0;
+}
+.purchasecard__img {
+    width: 20%;
+    height: 100%;
+    padding: 0 10px;
+}
+.purchasecard__name {
+    font-size: 0.8rem;
+    width: 40%;
+}
+.purchasecard__quantity {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    border: 1px solid #76b7eb;
+}
+.purchasecard__price {
+    width: 17%;
+    text-align: center;
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    .purchasecard__name {
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,38 @@
+.navbar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px 20px;
+    gap: 5px;
+    z-index: 1000;
+    height: 90px;
+    background-color: #91ac95;
+    box-shadow: 2px -1px 15px 10px #757373 ;
+}
+.navbar__title {
+    max-width: 150px;
+}
+.navbar__list {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    height: inherit;
+}
+.logo{
+    height: 80px;
+}
+
+
+@media (width < 426px) {
+    .navbar {
+        padding: 5px 5px;
+
+        justify-content: space-around;
+    }
+    .navbar__title {
+        max-width: 150px;
+    }
+}
