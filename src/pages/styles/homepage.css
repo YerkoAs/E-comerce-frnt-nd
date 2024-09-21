@@ -46,17 +46,20 @@
 }
 .homepage__input {
     display: flex;
-
     width: 300px;
+    margin: 40px 0 35px;
 }
-
+.homepage button{
+    height: fit-content;
+    margin: 40px 0 35px;
+}
 
 
 
 
 @media (width < 886px) {
     .homepage {
-        padding-top: 60px;
+        padding-top: 100px;
         flex-direction: column;
     }
     .homepage > button {
@@ -82,6 +85,13 @@
     }
     .homepage__filters > button:first-child {
         display: inline-block;
+    }
+}
+
+@media (width < 886px) {
+    .homepage {
+        padding-top: 120px;
+        flex-direction: column;
     }
 }
 

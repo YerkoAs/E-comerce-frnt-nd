@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 //const urlBase = 'https://e-commerce-api-v2.academlo.tech/api/v1'
-const urlBase = 'https://ecomerce-bck-nd.onrender.com/api/v1'
+const urlBase = import.meta.env.VITE_API_URL
 
 const products = createSlice({
     name: 'products',

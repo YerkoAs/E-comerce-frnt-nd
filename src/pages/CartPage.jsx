@@ -30,9 +30,10 @@ const CartPage = () => {
   }, 0);
 
   const handleBuy = () => {
-    dispatch(postPurchases());
-    dispatch(setCart([]));
-  }
+    dispatch(postPurchases()).then(() => {
+        dispatch(setCart([])); 
+    });
+}
 
   // console.log(cart)
 

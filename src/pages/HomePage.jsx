@@ -58,7 +58,6 @@ const HomePage = () => {
         <FilterSelect
           setCategoryValue={setCategoryValue}
         />
-        <button onClick={handleMode}>Change Mode</button>
       </div>
       <div className='homepage__container'>
         <div className='homepage__search'>
@@ -67,6 +66,7 @@ const HomePage = () => {
             onChange={handleChange} 
             ref={textInput} 
             className='homepage__input'
+            placeholder='Search by product ...'
           />
           <button>🔍</button>  
           

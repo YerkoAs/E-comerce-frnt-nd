@@ -3,7 +3,7 @@ import axios from 'axios'
 import bearerToken from "../../utils/bearerToken";
 
 //const urlBase = 'https://e-commerce-api-v2.academlo.tech/api/v1';
-const urlBase = 'https://ecomerce-bck-nd.onrender.com/api/v1'
+const urlBase = import.meta.env.VITE_API_URL
 
 const cart = createSlice({
     name: 'cart', 
@@ -12,9 +12,12 @@ const cart = createSlice({
         setCart: (_state, action) => action.payload,
         //addCart: (state, {payload}) => [...state, payload]
         addCart: (state, {payload}) => {state.push(payload)},
-        deleteCart: (state, {payload}) => state.filter(
-                    (item) => item.id!==payload,
-                ),
+        deleteCart: (state, { payload }) => {
+            const index = state.findIndex(item => item.id === payload);
+            if (index !== -1) {
+                state.splice(index, 1); 
+            }
+        },
         upCart: (state, {payload}) => {
             const {id, quantity} = payload;
             return state.map((item) => item.id === id ? {...item, quantity} : item)

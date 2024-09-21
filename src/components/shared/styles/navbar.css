@@ -8,7 +8,7 @@
     padding: 5px 20px;
     gap: 5px;
     z-index: 1000;
-    height: 90px;
+    height: fit-content;
     background-color: #91ac95;
     box-shadow: 2px -1px 15px 10px #757373 ;
 }
@@ -18,21 +18,36 @@
 .navbar__list {
     display: flex;
     align-items: center;
-    gap: 80px;
+    justify-content: space-evenly;
+    width: 70%;
+    gap:10%;
     height: inherit;
+    font-size: clamp(9px, 4vw, 25px);
 }
 .logo{
     height: 80px;
 }
 
 
-@media (width < 426px) {
+@media (width < 447px) {
     .navbar {
+        display: flex;
+        flex-wrap: wrap;
         padding: 5px 5px;
-
         justify-content: space-around;
+        border: 1px solid rgb(21, 255, 0);
+        height: fit-content;
     }
     .navbar__title {
         max-width: 150px;
     }
-}
+    .navbar__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        gap:7%;
+        height: inherit;
+        font-size: 20px;
+    }
+}   

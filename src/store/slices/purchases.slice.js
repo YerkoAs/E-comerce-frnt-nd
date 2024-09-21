@@ -3,10 +3,10 @@ import axios from "axios";
 import bearerToken from "../../utils/bearerToken";
 
 //const urlBase = 'https://e-commerce-api-v2.academlo.tech/api/v1';
-const urlBase = 'https://ecomerce-bck-nd.onrender.com/api/v1'
+const urlBase = import.meta.env.VITE_API_URL
 
 const purchases = createSlice({
-    name: 'purchases',
+    name: 'purchase',
     initialState: [],
     reducers: {
         setPurchases: (_state, {payload}) => payload,
@@ -20,15 +20,20 @@ export const { setPurchases, addPurchase } = purchases.actions;
 export default purchases.reducer;
 
 export const getPurchasesThunk = () => (dispatch) => {
-    const url = `${urlBase}/purchases`;
+    const url = `${urlBase}/purchase`;
     axios.get(url, bearerToken())
         .then((answer) => dispatch(setPurchases(answer.data)))
         .catch(err => console.log(err))
 };
 
-export const postPurchases = () => (dispatch) => {
-    const url = `${urlBase}/purchases`;
-    axios.post(url, {}, bearerToken())
-        .then((answer) => dispatch(addPurchase(answer.data)))
-        .catch(err => console.log(err))
-}
+export const postPurchases = () => (dispatch, getState) => {
+    const cartItems = getState().cartSlice;
+    const url = `${urlBase}/purchase`;
+    
+    return axios.post(url, cartItems, bearerToken()) 
+        .then((answer) => {
+            dispatch(addPurchase(answer.data));
+            dispatch(setCart([])); 
+        })
+        .catch(err => console.log(err));
+};
