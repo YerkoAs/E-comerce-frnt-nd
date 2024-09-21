@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
 
-//const urlBase = 'https://e-commerce-api-v2.academlo.tech/api/v1';
 const urlBase = import.meta.env.VITE_API_URL
 
 
